@@ -3,7 +3,8 @@ const density = "43210?!abc;:+=-,._    ";
 function setup() {
   noCanvas();
   capture = createCapture(VIDEO);
-  capture.size(208, 117);
+  capture.size(208*1.1, 117*1.1);
+  //capture.size(windowWidth,windowHeight);
   capture.hide();
   asciiDiv = createDiv();
 }
@@ -34,4 +35,5 @@ function draw() {
   }
 
   asciiDiv.html(asciiFrame);
+  asciiDiv.addClass('camera');
 }
